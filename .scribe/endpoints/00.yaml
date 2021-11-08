@@ -1,0 +1,47 @@
+name: 'Favorite/Unfavorite an article'
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: 'api/articles/{article}/favorites'
+    metadata:
+      title: 'Favorite an article.'
+      description: ''
+      authenticated: true
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      article:
+        name: article
+        description: ''
+        required: true
+        example: 19
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/favorites/{id}'
+    metadata:
+      title: 'Unfavorite an article.'
+      description: ''
+      authenticated: true
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the favorite.'
+        required: true
+        example: 7
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []

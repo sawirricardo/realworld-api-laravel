@@ -1,0 +1,31 @@
+name: 'User Management'
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/users/login
+    metadata:
+      title: Login
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'The user email'
+        required: true
+        example: et
+        type: string
+      password:
+        name: password
+        description: 'The user password'
+        required: true
+        example: consectetur
+        type: string
+    responses: []
+    responseFields: []
